@@ -1,17 +1,17 @@
 dev branch for Y.Practicum
-import java.util.Scanner;// dev branch for Y.Practicum
+import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
         System.out.println("На скольких человек необходимо разделить счёт?");
         Scanner scan = new Scanner(System.in);
-        int AmountOfPeople = scann.hasNextInt();
+        int AmountOfPeople = scan.hasNextInt();
         String AllNames = "";
         double AllPrices = 0;
 
         while (AmountOfPeople == 1 || AmountOfPeople < 1) {
             System.out.println("Введеное значение некоректно.");
-            AmountOfPeople = scann.hasNextInt();
+            AmountOfPeople = scan.hasNextInt();
         }
         while (true) {
             System.out.println("Напишите название товара:");
@@ -35,8 +35,12 @@ public class Main {
         System.out.println("Итоговая сумма с каждого гостя: " + result + " " + Formarter(total));
     }
     public static String Formarter(double x) {
+        
+        if(x % 100 >= 11 && x % 100 <= 19) {
+            return "рублей";
+        }
 
-        if(x % 10 == 1) {
+        else if(x % 10 == 1) {
             return "рубль";
         }
         else if (x % 10 == 2 || x % 10 == 3 || x % 10 == 4) {
