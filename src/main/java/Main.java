@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("На скольких человек необходимо разделить счёт?");
         Scanner scan = new Scanner(System.in);
-        int AmountOfPeople = scan.nextInt();
+        int AmountOfPeople = scann.hasNextInt();
         String AllNames = "";
         double AllPrices = 0;
 
