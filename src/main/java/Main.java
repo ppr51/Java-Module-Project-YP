@@ -11,11 +11,11 @@ public class Main {
 
         while (AmountOfPeople == 1 || AmountOfPeople < 1) {
             System.out.println("Введеное значение некоректно.");
-            AmountOfPeople = scan.nextInt();
+            AmountOfPeople = scann.hasNextInt();
         }
         while (true) {
             System.out.println("Напишите название товара:");
-            String name = scan.next();
+            String name = scan.nextLine();
             AllNames += name + " ";
 
             System.out.println("Напишите цену товара:");
